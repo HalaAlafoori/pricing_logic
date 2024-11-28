@@ -1,0 +1,20 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__
+
+# Ignore ERPNext specific files
+*.db
+*.json
+*.log
+*.swp
+*.swo
+
+# Ignore virtual environment directories
+venv/
+.env/
+
+# Ignore any system files
+.DS_Store
+Thumbs.db
+
