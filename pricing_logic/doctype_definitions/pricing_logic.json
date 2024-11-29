@@ -14,7 +14,7 @@
       "label": "Type",
       "fieldname": "type",
       "fieldtype": "Select",
-      "options": "Tiered Pricing\nCumulative Tiered Pricing",
+      "options": "Tiered Pricing\nCumulative Tiered Pricing\nDiscount\nItem Price",
       "default": "Tiered Pricing",
       "required": 1
     },
@@ -26,11 +26,104 @@
       "description": "List of items this pricing logic applies to"
     },
     {
-      "label": "Item Group",
-      "fieldname": "item_group",
-      "fieldtype": "Link",
+      "label": "Item Groups",
+      "fieldname": "item_groups",
+      "fieldtype": "Table",
       "options": "Item Group",
-      "description": "If not individual items, you can apply logic to an entire item group"
+      "description": "List of item groups this logic applies to"
+    },
+    {
+      "label": "Brands",
+      "fieldname": "brands",
+      "fieldtype": "Table",
+      "options": "Brand",
+      "description": "List of brands this logic applies to"
+    },
+    {
+      "label": "Transaction Type",
+      "fieldname": "transaction_type",
+      "fieldtype": "Select",
+      "options": "Sales\nBuying",
+      "description": "Whether the pricing logic applies to a sales or buying transaction"
+    },
+    {
+      "label": "Cumulative",
+      "fieldname": "cumulative",
+      "fieldtype": "Check",
+      "default": 0,
+      "description": "Indicates whether the logic is cumulative"
+    },
+    {
+      "label": "Coupon Code",
+      "fieldname": "coupon_code",
+      "fieldtype": "Link",
+      "options": "Coupon Code",
+      "description": "Optionally associate a coupon code with the pricing logic"
+    },
+    {
+      "label": "Customer Restriction",
+      "fieldname": "customer_restrictions",
+      "fieldtype": "Table",
+      "options": "Customer",
+      "description": "Restrict the pricing logic to multiple customers (for sales logic)"
+    },
+    {
+      "label": "Customer Group Restriction",
+      "fieldname": "customer_group_restrictions",
+      "fieldtype": "Table",
+      "options": "Customer Group",
+      "description": "Restrict the pricing logic to multiple customer groups (for sales logic)"
+    },
+    {
+      "label": "Territory Restriction",
+      "fieldname": "territory_restrictions",
+      "fieldtype": "Table",
+      "options": "Territory",
+      "description": "Restrict the pricing logic to multiple territories (for sales logic)"
+    },
+    {
+      "label": "Sales Partner Restriction",
+      "fieldname": "sales_partner_restrictions",
+      "fieldtype": "Table",
+      "options": "Sales Partner",
+      "description": "Restrict the pricing logic to multiple sales partners (for sales logic)"
+    },
+    {
+      "label": "Campaign Restriction",
+      "fieldname": "campaign_restrictions",
+      "fieldtype": "Table",
+      "options": "Campaign",
+      "description": "Restrict the pricing logic to multiple campaigns (for sales logic)"
+    },
+    {
+      "label": "Supplier Restriction",
+      "fieldname": "supplier_restrictions",
+      "fieldtype": "Table",
+      "options": "Supplier",
+      "description": "Restrict the pricing logic to multiple suppliers (for buying logic)"
+    },
+    {
+      "label": "Supplier Group Restriction",
+      "fieldname": "supplier_group_restrictions",
+      "fieldtype": "Table",
+      "options": "Supplier Group",
+      "description": "Restrict the pricing logic to multiple supplier groups (for buying logic)"
+    },
+    {
+      "label": "Price List",
+      "fieldname": "price_list",
+      "fieldtype": "Link",
+      "options": "Price List",
+      "required": 1,
+      "description": "Price list this logic applies to"
+    },
+    {
+      "label": "Currency",
+      "fieldname": "currency",
+      "fieldtype": "Link",
+      "options": "Currency",
+      "required": 1,
+      "description": "Currency associated with this pricing logic"
     },
     {
       "label": "Value",
@@ -38,6 +131,13 @@
       "fieldtype": "Currency",
       "required": 1,
       "description": "The pricing value, can be discount percentage or price per unit"
+    },
+    {
+      "label": "Pricing Method",
+      "fieldname": "pricing_method",
+      "fieldtype": "Select",
+      "options": "Rate per UOM\nFixed Price",
+      "description": "Pricing method if applicable"
     },
     {
       "label": "Start Date",
