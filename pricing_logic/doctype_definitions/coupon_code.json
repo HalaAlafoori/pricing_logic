@@ -1,0 +1,40 @@
+{
+  "doctype": "DocType",
+  "name": "Coupon Code",
+  "module": "Pricing Logic",
+  "fields": [
+    {
+      "fieldname": "coupon_code",
+      "fieldtype": "Data",
+      "label": "Coupon Code",
+      "required": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "discount_value",
+      "fieldtype": "Currency",
+      "label": "Discount Value",
+      "required": 1,
+      "description": "The value of the discount associated with this coupon"
+    },
+    {
+      "fieldname": "valid_from",
+      "fieldtype": "Date",
+      "label": "Valid From",
+      "description": "Start date when the coupon code becomes valid"
+    },
+    {
+      "fieldname": "valid_until",
+      "fieldtype": "Date",
+      "label": "Valid Until",
+      "description": "End date when the coupon code expires"
+    },
+    {
+      "fieldname": "active",
+      "fieldtype": "Check",
+      "default": 1,
+      "label": "Active",
+      "description": "Indicates if the coupon code is active"
+    }
+  ]
+}
