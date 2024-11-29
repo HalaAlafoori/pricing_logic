@@ -1,0 +1,42 @@
+{
+  "doctype": "DocType",
+  "name": "Tiered Pricing Logic",
+  "module": "Pricing Logic",
+  "fields": [
+    {
+      "fieldname": "pricing_logic",
+      "fieldtype": "Link",
+      "options": "Pricing Logic",
+      "label": "Pricing Logic",
+      "required": 1
+    },
+    {
+      "fieldname": "tier_type",
+      "fieldtype": "Select",
+      "options": "Tiered Pricing\nCumulative Tiered Pricing",
+      "label": "Tier Type",
+      "required": 1
+    },
+    {
+      "fieldname": "tiered_pricing_details",
+      "fieldtype": "Table",
+      "options": "Pricing Tier",
+      "label": "Pricing Tiers",
+      "description": "List of tiers with pricing details"
+    },
+    {
+      "fieldname": "pricing_method",
+      "fieldtype": "Select",
+      "options": "Rate per UOM\nFixed Price",
+      "label": "Pricing Method",
+      "required": 1
+    },
+    {
+      "fieldname": "active",
+      "fieldtype": "Check",
+      "default": 1,
+      "label": "Active",
+      "description": "Whether this tiered pricing logic is active"
+    }
+  ]
+}
