@@ -1,0 +1,41 @@
+{
+  "doctype": "DocType",
+  "name": "Pricing Tier",
+  "module": "Pricing Logic",
+  "fields": [
+    {
+      "fieldname": "tier_name",
+      "fieldtype": "Data",
+      "label": "Tier Name",
+      "required": 1
+    },
+    {
+      "fieldname": "min_quantity",
+      "fieldtype": "Float",
+      "label": "Minimum Quantity",
+      "required": 1,
+      "description": "Minimum quantity for this pricing tier"
+    },
+    {
+      "fieldname": "max_quantity",
+      "fieldtype": "Float",
+      "label": "Maximum Quantity",
+      "required": 1,
+      "description": "Maximum quantity for this pricing tier"
+    },
+    {
+      "fieldname": "price",
+      "fieldtype": "Currency",
+      "label": "Price",
+      "required": 1,
+      "description": "Price for the tier based on pricing method (Rate per UOM or Fixed Price)"
+    },
+    {
+      "fieldname": "uom",
+      "fieldtype": "Link",
+      "options": "UOM",
+      "label": "UOM",
+      "description": "Unit of Measure for this tier (if applicable)"
+    }
+  ]
+}
