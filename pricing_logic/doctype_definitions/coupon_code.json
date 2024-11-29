@@ -11,30 +11,37 @@
       "unique": 1
     },
     {
-      "fieldname": "discount_value",
-      "fieldtype": "Currency",
-      "label": "Discount Value",
+      "fieldname": "pricing_logic",
+      "fieldtype": "Link",
+      "options": "Pricing Logic",
+      "label": "Linked Pricing Logic",
       "required": 1,
-      "description": "The value of the discount associated with this coupon"
+      "description": "The Pricing Logic that applies when this coupon code is used"
     },
     {
-      "fieldname": "valid_from",
+      "fieldname": "start_date",
       "fieldtype": "Date",
-      "label": "Valid From",
-      "description": "Start date when the coupon code becomes valid"
+      "label": "Start Date",
+      "description": "The date when this coupon becomes active"
     },
     {
-      "fieldname": "valid_until",
+      "fieldname": "end_date",
       "fieldtype": "Date",
-      "label": "Valid Until",
-      "description": "End date when the coupon code expires"
+      "label": "End Date",
+      "description": "The expiration date for the coupon (optional)"
+    },
+    {
+      "fieldname": "usage_limit",
+      "fieldtype": "Int",
+      "label": "Usage Limit",
+      "description": "Maximum number of times this coupon can be used"
     },
     {
       "fieldname": "active",
       "fieldtype": "Check",
       "default": 1,
       "label": "Active",
-      "description": "Indicates if the coupon code is active"
+      "description": "Indicates whether this coupon code is currently active"
     }
   ]
 }
