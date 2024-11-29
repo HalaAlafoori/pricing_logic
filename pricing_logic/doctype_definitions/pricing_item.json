@@ -1,1 +1,91 @@
-# Doctype JSON: Pricing Item (for item-level details)
+{
+  "doctype": "DocType",
+  "name": "Pricing Logic",
+  "module": "Pricing Logic",
+  "fields": [
+    {
+      "label": "Logic Name",
+      "fieldname": "logic_name",
+      "fieldtype": "Data",
+      "required": 1,
+      "unique": 1
+    },
+    {
+      "label": "Type",
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "options": "Tiered Pricing\nCumulative Tiered Pricing",
+      "default": "Tiered Pricing",
+      "required": 1
+    },
+    {
+      "label": "Items",
+      "fieldname": "items",
+      "fieldtype": "Table",
+      "options": "Item",
+      "description": "List of items this pricing logic applies to"
+    },
+    {
+      "label": "Item Group",
+      "fieldname": "item_group",
+      "fieldtype": "Link",
+      "options": "Item Group",
+      "description": "If not individual items, you can apply logic to an entire item group"
+    },
+    {
+      "label": "Value",
+      "fieldname": "value",
+      "fieldtype": "Currency",
+      "required": 1,
+      "description": "The pricing value, can be discount percentage or price per unit"
+    },
+    {
+      "label": "Start Date",
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "description": "The date when this pricing logic starts to apply"
+    },
+    {
+      "label": "End Date",
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "description": "The date when this pricing logic ends (optional)"
+    },
+    {
+      "label": "Priority",
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "default": 0,
+      "description": "Priority of this pricing logic, lower number means higher priority"
+    },
+    {
+      "label": "Description",
+      "fieldname": "description",
+      "fieldtype": "Text",
+      "description": "A detailed description of the pricing logic"
+    },
+    {
+      "label": "Active",
+      "fieldname": "active",
+      "fieldtype": "Check",
+      "default": 1,
+      "description": "Indicates whether the pricing logic is active"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ]
+}
+
