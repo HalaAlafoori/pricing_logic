@@ -14,7 +14,7 @@
       "label": "Type",
       "fieldname": "type",
       "fieldtype": "Select",
-      "options": "Tiered Pricing\nCumulative Tiered Pricing", // Add your new type of logic here
+      "options": "Tiered Pricing\nCumulative Tiered Pricing",
       "default": "Tiered Pricing",
       "required": 1
     },
