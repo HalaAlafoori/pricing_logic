@@ -1,12 +1,12 @@
 {
   "doctype": "DocType",
-  "name": "Coupon Code",
+  "name": "Discount Code",
   "module": "Pricing Logic",
   "fields": [
     {
-      "fieldname": "coupon_code",
+      "fieldname": "discount_code",
       "fieldtype": "Data",
-      "label": "Coupon Code",
+      "label": "Discount Code",
       "required": 1,
       "unique": 1
     },
@@ -16,32 +16,32 @@
       "options": "Pricing Logic",
       "label": "Linked Pricing Logic",
       "required": 1,
-      "description": "The Pricing Logic that applies when this coupon code is used"
+      "description": "The Pricing Logic that applies when this discount code is used"
     },
     {
       "fieldname": "start_date",
       "fieldtype": "Date",
       "label": "Start Date",
-      "description": "The date when this coupon becomes active"
+      "description": "The date when this discount code becomes active"
     },
     {
       "fieldname": "end_date",
       "fieldtype": "Date",
       "label": "End Date",
-      "description": "The expiration date for the coupon (optional)"
+      "description": "The expiration date for the discount code (optional)"
     },
     {
       "fieldname": "usage_limit",
       "fieldtype": "Int",
       "label": "Usage Limit",
-      "description": "Maximum number of times this coupon can be used"
+      "description": "Maximum number of times this discount code can be used"
     },
     {
       "fieldname": "active",
       "fieldtype": "Check",
       "default": 1,
       "label": "Active",
-      "description": "Indicates whether this coupon code is currently active"
+      "description": "Indicates whether this discount code is currently active"
     }
   ]
 }
