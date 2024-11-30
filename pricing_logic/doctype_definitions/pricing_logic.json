@@ -54,13 +54,6 @@
       "description": "Indicates whether the logic is cumulative"
     },
     {
-      "label": "Coupon Code",
-      "fieldname": "coupon_code",
-      "fieldtype": "Link",
-      "options": "Coupon Code",
-      "description": "Optionally associate a coupon code with the pricing logic"
-    },
-    {
       "label": "Customer Restriction",
       "fieldname": "customer_restrictions",
       "fieldtype": "Table",
