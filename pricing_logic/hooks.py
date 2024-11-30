@@ -8,9 +8,9 @@ app_license = "agpl-3.0"
 # Apps
 # ------------------
 
-# daily task to set expired coupons code to inactive
+# daily task to set expired discounts code to inactive
 scheduler_events = {
     "daily": [
-        "pricing_logic.scripts.pricing_logic_scripts.tasks.deactivate_expired_coupons"
+        "pricing_logic.scripts.pricing_logic_scripts.tasks.deactivate_expired_discounts"
     ]
 }
