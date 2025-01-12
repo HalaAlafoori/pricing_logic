@@ -3,7 +3,7 @@ name = "pricing_logic"
 authors = [
     { name = "Momar Dia", email = "momar@boostwaydigital.com"}
 ]
-description = "Ab better pricing rules app"
+description = "Ab better pricing rules app"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
